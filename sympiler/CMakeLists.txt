@@ -7,7 +7,7 @@ if(UNIX)
     SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++11")
 endif()
 
-add_library(sympiler_proj sympiler.cpp Func.cpp Func.h Var.cpp Var.h Module.cpp Module.h
+add_library(sympiler_proj SHARED sympiler.cpp Func.cpp Func.h Var.cpp Var.h Module.cpp Module.h
         CodeGen_C.cpp CodeGen_C.h Target.cpp Target.h Output.cpp Output.h IR.cpp IR.h Expr.cpp Expr.h
         IROperator.cpp IROperator.h Schedule.cpp Schedule.h IRPrinter.h IRPrinter.cpp IRVisitor.h IRVisitor.cpp
         Type.h Type.cpp Optimization.h Optimization.cpp IntrusivePtr.h IRMutator.h IRMutator.cpp ScheduleCompute.cpp
